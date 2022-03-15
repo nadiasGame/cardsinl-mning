@@ -6,6 +6,9 @@ import CardForm from "./components/CardForm";
 
 import Top from "./components/Top";
 import CardStack from "./components/CardStack";
+import Home from "./views/Home";
+import AddCard from "./views/AddCard";
+
 
 const rootElement = document.getElementById("root");
 render(
@@ -15,6 +18,8 @@ render(
       <Route path="cardform" element={<CardForm />} />
       <Route path="top" element={<Top />} />
       <Route path="cardstack" element={<CardStack />} />
+      <Route path="home" element={<Home />} />
+      <Route path="addcard" element={<AddCard />} />
       <Route
         index
         element={

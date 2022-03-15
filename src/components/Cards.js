@@ -1,12 +1,10 @@
-import { Link, Outlet} from "react-router-dom";
+import { NavLink, Outlet} from "react-router-dom";
 import { getCards } from "../data";
 
 
 
 export default function Cards() {
-    return <h2>Card #???</h2>;
-}
-    let cards = getCards();
+  let cards = getCards();
     return (
       <div style={{ display: "flex" }}>
          <nav
@@ -24,6 +22,7 @@ export default function Cards() {
               color: isActive ? "red" :"",
 
           };
+        
         }}
     
           to={`/cards/${cardStack.number}`}
@@ -35,5 +34,4 @@ export default function Cards() {
     </nav>
     <Outlet />
        </div>
-    );
-  
+    )};

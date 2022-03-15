@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+
+.home {
+  position: absolute;
+  width: 283 px;
+  height: 63 px;
+  left: 46 px;
+  top: 193 px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26 px;
+  line-height: 30 px;
+  display: flex;
+  align-items: center;
+  
+  color: #000000;
+  }
+
+  TopCard {
+    position:absolute;
+width:304 px;
+height:26 px;
+left:55 px;
+top:108 px;
+
+font-family:Sans Pro;
+font-style:normal;
+font-weight : 600;
+font-size:12 px;
+line-height:15  px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: rgba(34, 34, 34, 0.6);
+
+}
+
