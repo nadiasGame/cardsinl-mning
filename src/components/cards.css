@@ -1,0 +1,101 @@
+
+
+/* E-WalLet */
+
+/* bitcoin inc */
+
+
+.bitcoincard {
+position:absolute;
+width: 235 px;
+height: 40 px;
+left: 98 px;
+top: 85 px;
+
+font-family: 'Gotham';
+font-style: normal;
+font-weight: 700;
+font-size: 22 px;
+line-height: 24 px;
+display: flex;
+align-items: center;
+text-transform: uppercase;
+
+/* Gray 1 */
+
+color: #333333;
+}
+.Cards { 
+    position: absolute;
+width: 304 px;
+height: 98 px;
+left: 55 px;
+top: 9 px;
+
+font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 35 px;
+line-height: 100 px ;
+/* or 35px */
+
+display:flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color:#222222;
+}
+
+.card__information {
+    margin-left: 1 rem;
+    text-align: left;
+}
+.credit-card {
+    display: flex;
+}
+
+/* active card */
+
+
+.TopCard {
+    position:absolute;
+width:304 px;
+height:26 px;
+left:55 px;
+top:108 px;
+
+font-family:Sans Pro;
+font-style:normal;
+font-weight : 600;
+font-size:12 px;
+line-height:15  px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: rgba(34, 34, 34, 0.6);
+
+}
+
+
+/* Home.js - View */
+
+.home {
+position: absolute;
+width: 283 px;
+height: 63 px;
+left: 46 px;
+top: 193 px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26 px;
+line-height: 30 px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}

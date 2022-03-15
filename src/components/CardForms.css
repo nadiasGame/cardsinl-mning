@@ -1,0 +1,19 @@
+/* CardForm.js - Component */
+
+.credit-card-form{
+position: absolute;
+width: 283 px;
+height: 63 px;
+left: 84 px;
+top: 641 px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20 px;
+line-height: 23 px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
