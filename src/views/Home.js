@@ -1,33 +1,34 @@
 
 
-import {data} from "../data";
-import { Link, Outlet } from "react-router-dom";
-import '../'
 
 
-function Home() {
+import '../App.css';
+import React,{useState} from 'react';
+
+import Top from '../components/Top';
+import CardStack from "../components/CardStack";
+import Cards from "../components/Cards";
+
+
+export default  function Home(props) {
    
-  
+
+    const  [selectedCards, setSelectedCards] = useState();
+ 
+    const [selectedCardStack, setSelectedCardStack]= useState({});
+
+
     return (
-        <div>
-        <h1>E-Wallet</h1>
-        <nav
-          style={{
-            borderBottom: "solid 1px",
-            paddingBottom: "1rem",
-          }}
-        >
-        
-          <Link to="/cards">Cards</Link>
-        <br></br>
-          <Link to="/addcard">AddCard</Link>
-         
-        </nav>
-     
-        <Outlet/>
-      </div>
+<section className="home">
+    <h1>{selectedCardStack} {setSelectedCardStack}</h1>
+    <h2>{selectedCards} {setSelectedCards}</h2>
+{/* //hämta från top components */}
+<Top  nameTitle="e-wallet" addName="active card"/>  
+<Cards cards={ props.selectedCards } setCard={ props.setSelectedCards }/>
+<CardStack cardsstack={ props.selectedCardStack} setCards={ props.setSelectedCardStack }/>
+
+</section>
+ 
     )
 }
 
-
-export default Home;

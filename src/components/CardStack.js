@@ -1,15 +1,9 @@
-import { useParams } from "react-router-dom";
-import { getCardStack} from "../data";
 
-export default function CardStack() {
-    let params = useParams();
-    let cardstack = getCardStack(parseInt(params.cardId, 10));
+
+function CardStack(props) {
+    const { selectedCardStack, setSelectedCardStack }=props;
     return (
-      <main style={{ padding: "1rem 0" }}>
-          
-        <h2>CardStack: {params.cardId}</h2>
-
-    <p>{cardstack.name}: {cardstack.number}</p>
-      </main>
-    );
-  }
+    <h1> { selectedCardStack},{ setSelectedCardStack }</h1>
+    )
+  };
+export default CardStack;

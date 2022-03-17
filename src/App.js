@@ -1,25 +1,45 @@
-import { Link, Outlet } from "react-router-dom";
-import React from 'react';
+
+
+import {useState} from "react";
 import './App.css'
 
-export default function App() {
-  return (
-    <div>
-      <h1>cardStack</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/cardstack">Cardstack</Link> |{" "}
-        <Link to="/cards">Cards</Link>
-        <Link to="/top">Top</Link>
-        <Link to="/cardform">CardForm</Link>
-      </nav>
-      <Outlet/>
-    </div>
-  );
-}
+import { Routes,Route,} from "react-router-dom";
 
 
+import Home from "./views/Home";
+import AddCard from "./views/AddCard";
+
+
+function App() {
+  
+
+  const  [selectedCards, setSelectedCards] = useState(0);
+ 
+
+
+  function addCard(card){
+    const newCards=selectedCards.concat(card);
+    setSelectedCards(newCards);
+  }
+ 
+
+  return(
+  <div className="App">
+
+ 
+  <Routes>
+      <Route path="/" element={<App />} />
+  
+      <Route path="/home" element={<Home />} />
+      <Route path="/addcard" element={<AddCard addCard= {addCard}/>} />
+     
+     
+      
+    </Routes>
+ 
+  </div>)
+};
+    
+
+
+export default App;

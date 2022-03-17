@@ -1,7 +1,10 @@
-export default function Top() {
-  return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2>Top</h2>
-    </main>
-  );
-}
+export default function Top(props) {
+    
+    const {nameTitle, addName, nameText, addText} = props
+    
+    
+    return (
+        
+    <h1 className="top"> {nameTitle},{addName},{nameText},{addText}</h1>
+    )
+  };
