@@ -4,8 +4,9 @@
 import '../App.css';
 import '../components/Cardform.css'
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom';
 
-;
+import './addcard.css'
 
 
 import Top from '../components/Top';
@@ -14,22 +15,36 @@ import Cards from "../components/Cards";
 
 
  function AddCard(props) {
-    const [newCard, setNewCard]= useState ({});
-    const [addCard, setAddCard]= useState ();
+       
+    const makeCard={
+        cardNumber:'',
+        name:'',
+        vaild:'',
+        ccv:'',
+       company:''
+ };
+ 
+    const [latestCard, setLatestCard]= useState (makeCard);
+    const navigate= useNavigate ();
+const {setCards}=props;
 
+
+function handleOnKey(){
+    setCards(latestCard)
+    navigate('/Home')
+};
     return (
-<main className= "bankcard">
-<h1>{newCard} {setNewCard}</h1>
-<h2>{addCard} {setAddCard}</h2>
 
+<main className ="addCard">
 
-<Top nameText="Add-card" addText="saved-card"/>  
-<Cards cards={ props.newCard } setCards={ props.setNewCard }/>
-<CardForm addCard={ props.addCard}setAddCards={ props.setAddCards } />
-
+<Top addTitle="Add-card" addText="saved-card"/>  
+<Cards cards={ latestCard } />
+<CardForm setCards={ setLatestCard} />
+<button onClick={ handleOnKey } className="addButton">add card</button>
 </main>
  
     )
-    }
+}
+
 
 export default AddCard;

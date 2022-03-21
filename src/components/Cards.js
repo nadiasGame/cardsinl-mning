@@ -1,11 +1,12 @@
 
-
+import{useState} from 'react';
+import './cards.css'
 
 function Cards(props) {
-
-    const { Cards, setNewCards}=props;
+  const [ cards, setCards]=props;
+    //const [ Cards, setNewCards]=props;
     return (
-    <h1 className="cards" > { Cards },{ setNewCards} </h1>
+    <h1 > { Cards },{ setCards} </h1>
     )
   };
 export default Cards;

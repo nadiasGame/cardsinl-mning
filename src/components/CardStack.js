@@ -1,9 +1,10 @@
 
-
+import {useState}from 'react';
 function CardStack(props) {
-    const { setCardStack, setNewCardStack }=props;
+    const [CardStack, setCardStack ]=useState();
     return (
-    <h1> { setCardStack},{ setNewCardStack }</h1>
+    <h1> { CardStack},{ setCardStack }</h1>
     )
+  
   };
 export default CardStack;

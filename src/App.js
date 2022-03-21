@@ -16,7 +16,7 @@ function App() {
   
 
   const  [newCards, setNewCards] = useState([]);
- //setAddCard.{cards=>[...setAddCard,newCard]}
+
 
 
   function addCard(newCard){
