@@ -1,17 +1,25 @@
 
 
 import './Cardform.css';
-import{useState, useRef} from 'react';
+import{useState} from 'react';
+import { Link } from 'react-router-dom';
 
 
 
  function CardForm(props) {
+   const [newCard,setNewCard]=useState({
+cardHolderName:'',
+number:'',
+name:'',
+vaild:'',
+ccv:'',
+id:null
 
- 
-  
-    const [addcard, setAddcard]=useState ({});
+    });
 
-    const cardHolderNameEl = useRef(null);
+   
+
+    /* const cardHolderNameEl = useRef(null);
     const nameEl = useRef(null);
     const validEl = useRef(null);
     const ccvEl = useRef(null);
@@ -23,43 +31,47 @@ function handleOnKeyUp(){
   
  
    
-    const addcardObj={
+    const addcardObj=[{
         cardHolderName:cardHolderNameEl.current.value,
         name:nameEl.current.value,
         valid:validEl.current.value,
         ccv:ccvEl.current.value,
         company:companyEl.current.value
-       }
-       setAddcard(addcardObj);
-  
+       }]
+       props.setAddcard(addcardObj);
+   */
 
 
 
-}
+
     
      return(  
       
       
-<div className="Cardform">
-    <form> 
-        <input  type="text" placeholder="CARD NUMBER" ref={cardHolderNameEl} onKeyUp={ handleOnKeyUp } />
-        <br></br>
-        <input type="text" placeholder="NAME" ref={nameEl} onKeyUp={ handleOnKeyUp } />
-        <br></br>
-        <input className="valid" type="VALID THRU" ref={validEl} onKeyUp={ handleOnKeyUp } />
-             <br></br>
-        <input  type="CCV" placeholder="ccv" ref={ccvEl}onKeyUp={ handleOnKeyUp } />
-        <br></br>
-        <input type="VENDOR" placeholder="addcard" onKeyUp={ handleOnKeyUp } />
-        <br></br>
-        <button type="ADD CARD" placeholder="addcard" onKeyUp={ handleOnKeyUp } />
+<main>
+   <div>CardForm</div>
+
+        <label htmlFor='number'>ID:/</label>
+        <input onChange={(e)=>setNewCard({...newCard, id: e.target.value})} style={{width:'50px'}} id="number" type="number"></input>
+        
+        <label htmlFor='name'>Name:</label>
+            <input onChange={(e) => setNewCard({...newCard, name: e.target.value})} id="name" type="text"></input>
+            
+             <label htmlFor='ccv'>Ccv:</label>
+          <input  onChange={(e)=> setNewCard({...newCard, ccv: e.target.value})} id="ccv" type="text"></input>
+      
+        <label htmlFor='valid'>Valid:</label>
+
+        <input  onChange={(e)=> setNewCard({...newCard, valid: e.target.value})} id="valid" type="text"></input>
+        <input onClick={() => props.setCards(newCard)} type="button" value="ADD-CARD"></input>
+            <Link to="/">HOME</Link>
+        
        
        
-       
-         </form>
-         </div>
+        
+         </main>
        
       
-    );
+    )
   }
   export default CardForm;
