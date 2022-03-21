@@ -3,9 +3,9 @@
 
 function Cards(props) {
 
-    const { selectedCards, setSelectedCards}=props;
+    const { Cards, setNewCards}=props;
     return (
-    <h1 className="cards" > { selectedCards },{ setSelectedCards} </h1>
+    <h1 className="cards" > { Cards },{ setNewCards} </h1>
     )
   };
 export default Cards;

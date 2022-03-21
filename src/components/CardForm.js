@@ -63,6 +63,7 @@ function handleOnKeyUp(){
         <label htmlFor='valid'>Valid:</label>
 
         <input  onChange={(e)=> setNewCard({...newCard, valid: e.target.value})} id="valid" type="text"></input>
+        
         <input onClick={() => props.setCards(newCard)} type="button" value="ADD-CARD"></input>
             <Link to="/">HOME</Link>
         

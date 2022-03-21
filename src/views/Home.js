@@ -7,13 +7,14 @@ import React from 'react';
 
 
 
-export default  function Home(props) {
+ function Home(props) {
    
-console.log(props);
+console.log(props.cards);
     
     return (
 <main>
-    {props.cards.map((card, i)=>(
+
+    { props.cards.map((card, i)=>(
         <p key={i} > {card.number} </p>
     ))} 
   
@@ -24,3 +25,4 @@ console.log(props);
 
 }
 
+export default  Home;

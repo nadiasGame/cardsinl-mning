@@ -1,9 +1,9 @@
 
 
 function CardStack(props) {
-    const { selectedCardStack, setSelectedCardStack }=props;
+    const { setCardStack, setNewCardStack }=props;
     return (
-    <h1> { selectedCardStack},{ setSelectedCardStack }</h1>
+    <h1> { setCardStack},{ setNewCardStack }</h1>
     )
   };
 export default CardStack;

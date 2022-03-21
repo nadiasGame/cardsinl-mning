@@ -1,7 +1,7 @@
 
 
 import {useState,useEffect} from "react";
-import { BrowserRouter as  Routes, Route } from 'react-router-dom';
+import { BrowserRouter as  Router,Routes, Route } from 'react-router-dom';
 import './App.css'
 
 
@@ -30,17 +30,19 @@ function App() {
 
   return(
  
- 
+
+   <Router>
   <Routes>
       <Route path="/" element={<App />} />
   
-      <Route path="/" element={<Home newcards={newCards} />} />
+      <Route path="/Home" element={<Home newcards={newCards} />} />
       <Route path="/AddCard" element={<AddCard setaddCards= {addCard}/>} />
       <Route path="/Cards" element={<Cards setCards= {Cards}/>} />
      
      
       
     </Routes>
+    </Router>
  
 
   );
