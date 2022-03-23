@@ -43,9 +43,9 @@ function handleCards(){
       
       
 
-   <form className="cardAdd">
+   <form className="cardForm">
 
-        <label id='number'>Card Number
+        <label id='numberText'>Card Number
         <br></br>
         <input id='numberInput'className="inputCss" type='text'inputref={ numberEl } maxLength="18" minLength="15" onChange={ handleCards }/>
          </label>
@@ -53,7 +53,7 @@ function handleCards(){
         <label id='nameText'>Card Holder Name 
         <br></br>
 
-       <input id="nameInput" className="inputCss" type='text' ref={ nameEl } onChange={ handleCards }/>
+       <input id="nameInput" className="inputName" type='text' ref={ nameEl } onChange={ handleCards }/>
        </label>
             
              <label id='ccvText'>Ccv<br></br>
@@ -61,15 +61,21 @@ function handleCards(){
           </label>
         <label id='validText'>Valid Tru<br></br>
 
-        <input  id='validInput' type='text'ref={ validEl } className="inputFieldHalfSize" maxLength="5" onChange={ handleCards }/>
+        <input  id='validInput' type='text'ref={ validEl } className="inputFieldHalfSize" maxLength="5" onChange={ handleCards }/><br/>
         </label>
-        <label id="vendorText">Vendor<br/>
-        
-        </label>
-        </form>
-        
-    
-      
-    )
-  }
+        <div className="">
+          <label id="vendorText">VENDOR</label><br/>
+          <select id="companyDropdown" className="inputField" ref={ companyEl } onChange={ handleCards }>
+          <option value=""></option>
+                <option value="bitcoin">Bitcoin inc</option>
+                <option value="ninja">Ninja bank</option>
+                <option value="blockchain">Block chain inc</option>
+                <option value="evilcorp">Evil corp</option>
+                
+            </select>
+            </div>
+            
+            </form>
+     )};
+  
   export default CardForm;

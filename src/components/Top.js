@@ -1,10 +1,12 @@
+import './Top.css'
+
 export default function Top(props) {
     
-    const {nameTitle, addName, nameText, addText} = props
+    const  {nameTitle, addName, nameText, addText} = props
     
     
     return (
         
-    <h1 className="top"> {nameTitle},{addName},{nameText},{addText}</h1>
+    <h1 className="headline,subHeadline"> {nameTitle},{addName},{nameText},{addText}</h1>
     )
   };

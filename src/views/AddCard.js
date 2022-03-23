@@ -29,9 +29,9 @@ import Cards from "../components/Cards";
 const {setCards}=props;
 
 
-function handleOnKey(){
+function handleSubmit(){
     setCards(latestCard)
-    navigate('/Home')
+    navigate('/home')
 };
     return (
 
@@ -40,7 +40,7 @@ function handleOnKey(){
 <Top addTitle="Add-card" addText="saved-card"/>  
 <Cards cards={ latestCard } />
 <CardForm setCards={ setLatestCard} />
-<button onClick={ handleOnKey } className="addButton">add card</button>
+<button onClick={ handleSubmit } className="addButton">add card</button>
 </main>
  
     )
