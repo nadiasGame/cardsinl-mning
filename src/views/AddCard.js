@@ -35,13 +35,13 @@ function handleSubmit(){
 };
     return (
 
-<main className ="addCard">
+<section className ="addCardCointainer">
 
-<Top addTitle="Add-card" addText="saved-card"/>  
+<Top addTitle="Add-card" addText="new-card"/>  
 <Cards cards={ latestCard } />
 <CardForm setCards={ setLatestCard} />
 <button onClick={ handleSubmit } className="addButton">add card</button>
-</main>
+</section>
  
     )
 }

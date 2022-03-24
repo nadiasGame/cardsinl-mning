@@ -6,7 +6,8 @@ import '../App.css';
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
-import'../views/home.css';
+import'./home.css';
+
 
 
 import Cards from '../components/Cards';
@@ -26,26 +27,30 @@ import Top from '../components/Top';
            company:''
      };
      
-     const [Card,setCard]= useState(makeCard);
+     const [selectedCard,setSelectedCard]= useState(makeCard);
 
 const { cards } = props;
 console.log(cards)
+
 useEffect(()=> {
         if(cards.length > 0){
-        setCard(cards[0])
+        setSelectedCard(cards[0])
     }
 },[cards])
     return (
-<section className='homeCss'>
+<section className='homeContainer'>
 
 
 <Top nameTitle="e-wallet" addName="active-card"/>  
-<Cards Cards={ Card} setCard={ setCard }/>
-<CardStack Cards={ Cards } setCard={ setCard} />
-<button id='homeButton' onClick={()=> { navigate('/addcard')}}>add a new card</button>
+<Cards Card={ selectedCard} setCard={ setSelectedCard }/>
+<CardStack Card={ Cards } setCard={ setSelectedCard} />
+<button id='homeButton' onClick={()=> { navigate('/AddCard')}}>add a new card</button>
 </section >
     )
 }
+
+
+
 
 
 

@@ -8,53 +8,62 @@ import chip from '../Assets/chip-light.svg';
 
 import './cards.css'
 
-function Cards(props) {
-  const { cards, setCards}=props;
-  var cardsLogo;
+function Card(props) {
+  const { card, setCard}=props;
+  var cardLogo;
+  
 
     const chipImage = chip;
-    var cardsClass = "card";
 
-    if (cards.company === "bitcoin"){
-        cardsLogo = bitcoinLogo
-        cardsClass += " bitcoin"
 
-    } else if(cards.company === "blockchain"){
-        cardsLogo = blockLogo
-        cardsClass += " blockchain"
+    var cardClass = "card";
+console.log(card);
 
-    } else if(cards.company === "ninja") {
-        cardsLogo = ninjaLogo
-        cardsClass += " ninja"
 
-    } else if(cards.company === "evilcorp"){
-        cardsLogo = evilLogo
-        cardsClass += " evilcorp"
+if (card){//gör en if sats om korten är tomma så...
+    card=(setCard)
 
-    } else if(cards.company === ""){
-        cardsLogo = bitcoinLogo
+     if (card.company === "bitcoin"){
+        cardLogo = bitcoinLogo
+       
 
-    }
 
+    } else if(card.company === "blockchain"){
+        cardLogo = blockLogo
+        
+
+    } else if(card.company === "ninja") {
+        cardLogo = ninjaLogo
+       
+
+    } else if(card.company === "evilcorp"){
+        cardLogo = evilLogo
+        
+
+    } else if(card.company === ""){
+        cardLogo = bitcoinLogo
+
+    } 
+}
     function changeCard(){
-        setCards(cards)
+        setCard(card)
     }
-console.log(cards.valid);
-    //const [ Cards, setNewCards]=props;
     return (
-      <section className={ cardsClass } onClick={ changeCard }>
-      <img className='cardLogo' src={ cardsLogo } alt="logga"/>
+      <section className={ cardClass } onClick={ changeCard }>
+
+      <img className='cardLogo' src={ cardLogo } alt="logga"/>
       <img className='chipImg' src={ chipImage } alt="chipImg"/>
-      <p id="cardNumberText">{ cards.cardNumber ? cards.cardNumber : "0000 0000 0000 0000" }</p>
+      
+      <p id="cardNumberText">{ card ? card.cardNumber : "0000 0000 0000 0000" }</p>
       <p id="cardHolderName">CARDHOLDER NAME</p>
-      <p id="cardNameText">{ cards.name ? cards.name : "Firstnamn lastname" }</p>
+      <p id="cardNameText">{ card ? card.name : "Firstnamn lastname" }</p>
       <p id="validThru">VALID THRU</p>
     
-      <p id="cardValidText">{ cards.valid ? cards.valid : "MM/YY" }</p>
+      <p id="cardValidText">{ card ? card.valid : "MM/YY" }</p>
         
   </section>
 
 )
 }
     
-export default Cards;
+export default Card;
