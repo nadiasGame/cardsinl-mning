@@ -54,12 +54,12 @@ setCards(card)
       
 
    <div>
-     <div className="cardForm">
+     <div className="cardNumber">
 
-        <label id='numberText'>Card Number
+       <label>{uppdateCard}</label>
         <br></br>
-        <input id='numberInput'className="inputCss" type='text'inputref={ numberEl } maxLength="18" minLength="15" onChange={ uppdateCard }/>
-         </label>
+        <input onChange={uppdateCard}className="inputCss" type='text'inputref={ numberEl } maxLength="18" minLength="15"/>
+         
         
         <label id='nameText'>Card Holder Name 
         <br></br>
