@@ -1,12 +1,10 @@
 
 
-
-
 import '../App.css';
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
-import'./home.css';
+
 
 
 

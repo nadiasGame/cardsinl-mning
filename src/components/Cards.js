@@ -1,12 +1,12 @@
 
-import bitcoinLogo from '../Assets/chip-dark.svg';
-import ninjaLogo from '../Assets/vendor-ninja.svg';
-import blockLogo from '../Assets/vendor-blockchain.svg';
-import evilLogo from '../Assets/vendor-evil.svg';
-import chip from '../Assets/chip-light.svg';
+import bitcoinLogo from '../e-wallet-assets/chip-dark.svg';
+import ninjaLogo from '../e-wallet-assets/vendor-ninja.svg';
+import blockLogo from '../e-wallet-assets/vendor-blockchain.svg';
+import evilLogo from '../e-wallet-assets/vendor-evil.svg';
+import chip from '../e-wallet-assets/chip-light.svg';
 
 
-import './cards.css'
+
 
 function Card(props) {
   const { card, setCard}=props;

@@ -2,11 +2,11 @@
 
 
 import '../App.css';
-import '../components/Cardform.css'
+
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 
-import './addcard.css'
+
 
 
 import Top from '../components/Top';
