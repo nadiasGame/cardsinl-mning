@@ -15,7 +15,7 @@ import Cards from "../components/Cards";
 
 
  function AddCard(props) {
-       
+       //make card
     const makeCard={
         cardNumber:'',
         name:'',
