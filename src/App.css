@@ -1,351 +1,203 @@
-
-
-.App {
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 410px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-state{
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(34, 34, 34, 0.6);
+  text-align: center;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.displayed-card{
+  background: linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%), #FFAE34;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction:column;
+  margin: 0 auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 30px;
+  max-width: 350px;
+  margin-top: 10px;
 }
 
 
-/* new card in AddCard.js */
+.card-header{
+  display: flex;
+  justify-content: space-between;
+}
 
-.card {
+.vendors-icone{
+  justify-items: left;
+}
 
-  width: 75%;
-  position: relative;
-  width: 382px;
-  height: 241px;
-  margin: 10px auto;
+.card-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 35px;
+  text-align: left;
 
-  background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+}
+.card-number{
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-align: center;
+}
+
+.name-date-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-card-label{
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
   align-items: center;
-
-
-}
-
-.cardnumber input {
-  position: relative;
-  width: 382px;
-  height: 30px;
-  margin: 0 auto;
-  font-size: large;
-
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-.cardnumber  {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 382px;
-  text-align: left;
-}
-
-.cardnumber label {
-  font-size: 12px;
-  font-style: normal;
-}
-
-.cardname {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 382px;
-  height: 30px;
-  text-align: left;
-}
-
-.cardname label {
-  font-size: 12px;
-  font-style: normal;
-}
-
-.cardname input {
-  position: relative;
-  width: 382px;
-  height: 30px;
-  margin: 0 auto;
-  font-size: large;
-
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-
-.validCcvName {
-  font-size: 12px;
-  font-style: normal;
-}
-
-.validText{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 382px;
-  text-align: left;
-  top: 17px;
-}
-
-.ccvText {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 382px;
-  text-align: left;
-  padding-left: 380px;
-  
-}
-
-#validthru {
-  position: relative;
-  width: 175px;
-  height: 30px;
-  
-
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
-  border-radius: 8px;
-  margin-left: -30px;
-}
-
-#ccv {
-  position: relative;
-  width: 175px;
-  height: 30px;
-  
-
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-.vendor1 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 382px;
-  height: 30px;
-  text-align: left;
-
-  font-size: 12px;
-  font-style: normal;
-}
-
-#vendor {
-  position: relative;
-  width: 382px;
-  height: 30px;
-  margin: 0 auto;
-  font-size: large;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
-  border-radius: 8px;
-  margin-top: -16px;
-}
-
-/* Card design i Card */
-
-.cardchip  {
-  position: absolute;
-  display: flex;
-  align-items: left;
-  padding: 15px 0 0 15px;
-}
-
-.cardMaker {
-  position: absolute;
-  left: 83.33%;
-  right: 10%;
-  top: 18.53%;
-  bottom: 77.16%;
-}
-
-.nameMonthText {
-  display: flex;
-  top: 50px;
-}
-
-.cardValidThru {
-  width: 50%;
-}
-
-.cardHolder  {
-  width: 50%;
-}
-
-.cardHolderNumber {
-  padding-top: 120px;
-  font-size: 30px;
-
-}
-
-
-/* YY/MM + rubrik på kortet */
-
-.yymm {
-  position: relative;
-  font-size: 9px;
-  margin-top: -20px;
-  padding-left: 120px;
+  text-align: right;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+  /* text effect */
+  text-shadow: -0.5px -0.5px 0px rgba(255, 255, 255, 0.25), 0.5px 0.5px 0px rgba(255, 255, 255, 0.5);
 }
 
-.cardValidThru {
-  position: relative;
-  margin-top: -10px;
-  font-size: 13px;
+.card-info p{
+  margin: 0;
+}
+
+.info-card-input{
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
-
+  color: #000000;
 }
 
-.addButton{
-  margin-top: 90px;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+.card-stack {
+  position: relative;
+  margin-top: 40px ;
+  margin-bottom: 40px;
+}
+
+.card-stack-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.addCard-btn{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: white;
+  height: 50px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+ 
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 410px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  padding-top: 10px;
 }
-
-/* namn + rubrik på namnet på kortet */
-.cardHname {
-  position: relative;
-  font-size: 9px;
-  margin-top: -15px;
-  padding-left: 20px;
+.label-form{
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+  padding-top: 20px;
 }
 
-.cardHolder {
-  position: relative;
-  margin-top: -10px;
-  font-size: 13px;
+.input-form{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 50px;
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
   text-transform: uppercase;
-  
-  position: absolute;
-  width: auto;
-  height: 32px;
-  word-break: keep-all;
-  white-space: nowrap;
-
+  color: #000000;
 }
-
-/* 
-.cardHolder {
-  position: absolute;
-width: 251px;
-height: 32px;
-left: 32px;
-top: 330px;
-font-family: 'PT Mono';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 20px;
-display: flex;
-align-items: center;
-text-transform: uppercase;
-} */
-
-/* använd transform i css på cardstacken **/
-
-
-/* css ändra färgen på korten */
-
-.Blockchain {
-  background-color: #7f51e3 !important;
-}
-
-.Bitcoin {
-  background-color: #ffb444 !important;
-}
-
-.Ninja {
-  background-color: #333333 !important;
-  color: #bbbbbb !important;
-}
-
-.Evil {
-  background-color: #db2f4e !important;
-}
-
-/* deleteknappen */
-
-.delete {
-  margin-left: 150px;
-  margin-top: 25px;
-  
-
-  background-color: rgb(136, 4, 4); /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-
-}
-
-.selected:hover .delete {
-  display: unset;
-  
-}
-
-.motherDiv {
+.form-row3{
   display: flex;
+  flex-direction: row;
 }
 
-.deleteButton {
-  width: 25%;
+.data-verification{
+  text-align: left;
+  padding-top: 15px;
 }
 
-.cardbox {
-  padding-left: 50px;
+.form-btn{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 50px;
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height:  22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  margin-top: 20px;
+}
+
+.addCard-btn:hover, .form-btn:hover {
+  background: hsl(0, 4%, 84%);
+  color: #ffffff;
 }

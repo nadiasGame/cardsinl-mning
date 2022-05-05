@@ -1,15 +1,9 @@
-import '../App.css'
-
-export default function Top(props) {
-    
-    const  {nameTitle, addTitle, addText, addName} = props
-    
-    
-    return (
-        
+export default function Top(props){
+  const { title, cardState } = props;
+  return(
       <section>
-      <h2 className="headline">{ addTitle }{ nameTitle }</h2>
-      <p className='subHeadline'> { addText }{ addName }</p>
-  </section>
-    )
-  };
+          <h1>{title}</h1>
+          <p className="card-state">{cardState}</p>
+      </section>
+  )
+}

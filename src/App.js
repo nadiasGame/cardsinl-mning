@@ -1,49 +1,19 @@
-
-
-import {useState} from "react";
-import { Routes, Route } from 'react-router-dom';
-import './App.css'
-
-
-
-
-import Home from "./views/Home";
-import AddCard from "./views/AddCard";
-
-
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Home from './views/Home';
+import AddCard from './views/AddCard'
 
 function App() {
-  
-
-  const  [cards, setCards] = useState([]);
-
-
-
-  function addNewCard(card){
-    console.log('new card  added', card);
-    setCards ((oldCards) => {
-      oldCards.push(card)
-      return oldCards;
-    })
-  }
- 
-
-  return(
- 
-<div className="App">
-   
-  <Routes>
-      <Route path="/" element={<App />} />
-  
-      <Route path="/Home" element={<Home cards={cards} setCards={ setCards }/>} />
-      <Route path="/AddCard" element={<AddCard setCards= {addNewCard}/>} />
-
-      
-    </Routes>
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/cards" element={ <Home /> } />
+          <Route path="/addcard" element={ <AddCard /> } />
+        </Routes>
+        </BrowserRouter>
     </div>
   );
 }
-    
-
 
 export default App;
