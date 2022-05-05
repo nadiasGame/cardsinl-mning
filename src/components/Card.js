@@ -1,4 +1,3 @@
-
 export default function Card ({color, chip, logo, number, name, date}){
     return (
         <div>

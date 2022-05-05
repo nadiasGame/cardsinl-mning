@@ -1,17 +1,17 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, } from 'react-router-dom';
 import './App.css';
-import Home from './views/Home';
-import AddCard from './views/AddCard'
+import Home from './Views/Home';
+import AddCard from './Views/AddCard'
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+    
         <Routes>
-          <Route path="/cards" element={ <Home /> } />
-          <Route path="/addcard" element={ <AddCard /> } />
+          <Route path="/" element={ <Home /> } />
+          <Route path="/AddCard" element={ <AddCard /> } />
         </Routes>
-        </BrowserRouter>
+       
     </div>
   );
 }
